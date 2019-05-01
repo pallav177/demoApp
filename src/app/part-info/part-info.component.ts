@@ -1,24 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-part-search',
-  templateUrl: './part-search.component.html',
-  styleUrls: ['./part-search.component.css']
+  selector: 'app-part-info',
+  templateUrl: './part-info.component.html',
+  styleUrls: ['./part-info.component.css']
 })
-export class PartSearchComponent implements OnInit {
-
-  // partForm = new FormGroup({
-  //   firstName: new FormControl('Sheshank', Validators.required),
-  //   lastName: new FormControl('Jamwal', Validators.required),
-  // });
-
-  showButton: boolean = true;
+export class PartInfoComponent implements OnInit {
   public displayedColumns = ['CP', 'specifications', 'value1', 'value2', 'value3', 'value4'];
   dataSource: any[];
-  showTable: boolean;
-  constructor(private router: Router) { }
+  constructor() { }
 
   ngOnInit() {
     this.dataSource = [{ CP: '340', specifications: 'Diameter Bore (8x)' }
@@ -30,16 +21,5 @@ export class PartSearchComponent implements OnInit {
     { CP: '346', specifications: 'Diameter Bore (8x)' },
     { CP: '347', specifications: 'Diameter Bore (8x)' },
     { CP: '348', specifications: 'Diameter Bore (8x)' }];
-  }
-
-  search(value) {
-    this.showButton = value;
-    if (value) {
-      this.showTable = !value;
-    }
-  }
-
-  table(value) {
-    this.showTable = value;
   }
 }
