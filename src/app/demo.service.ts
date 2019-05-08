@@ -9,8 +9,11 @@ export class DemoService {
 
   constructor(private http: HttpClient) { }
 
-  request(endpoint,payload) {
-    return this.http.post(endpoint,payload);
+  request(endpoint, payload) {
+    return this.http.post(endpoint, payload);
+  }
 
+  requestGet(endpoint, payload) {
+    return this.http.get(endpoint, payload);
   }
 }

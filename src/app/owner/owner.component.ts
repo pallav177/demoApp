@@ -19,16 +19,16 @@ export class OwnerComponent implements OnInit {
       PageSize: 10,
       CompanyId: 77
     };
-    this.demoservice.request(environment.baseurl + "owner/GetOwnerList", load).subscribe
-      (
-        data => {
-          // this.owners = 
-        }, error => {
-        }
-
-      );
-
-
+    // this.demoservice.request(environment.baseurl + "owner/GetOwnerList", load).subscribe
+    //   (
+    //     data => {
+    //       debugger;
+    //       // this.owners = 
+    //     }, error => {
+    //       debugger;
+    //     }
+    //   );
+    // this.owners = [];
     let variable = 'sheshank';
 
 
